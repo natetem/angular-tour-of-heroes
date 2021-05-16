@@ -11,9 +11,13 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './service/in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MaterialModule } from './material.module';
+import { AboutComponent } from './about/about.component';
+import { CitationsComponent } from './citation/citations/citations.component';
+import { CitationModule } from './citation/citation.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +25,8 @@ import { MaterialModule } from './material.module';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,8 @@ import { MaterialModule } from './material.module';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }),
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    CitationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

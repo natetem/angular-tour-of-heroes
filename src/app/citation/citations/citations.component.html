@@ -1,0 +1,12 @@
+<div>
+    <mat-card *ngFor="let citation of citations" class="citation-card">
+        <mat-card-header>
+            <mat-card-title>{{citation.author}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <img src={{citation.image}} alt={{citation.author}}>
+            <p>{{citation.message}}</p>
+        </mat-card-content>
+
+    </mat-card>
+<div>
